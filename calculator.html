@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div button{
+            margin:20px;
+            color:darkred;
+            padding: 10px;
+            font-size: 20px;
+            background-color: aqua;
+            border:0px;
+            font-weight: bold;
+            border-radius: 20px;
+            box-shadow: 3px 3px 3px gray;
+        }   
+        div button:hover{
+            background-color: yellow;
+            color:black;
+            cursor: pointer;
+        }p{
+            font-size: 30px;
+            color:blueviolet;
+        }#val1,#val2{
+            font-size: 20px;
+        }h3{
+            font-size: 30px;
+            background-color: bisque;
+        }
+        #val1,#val2:focus{
+          background-color: wheat;
+        }
+    </style>
+</head>
+<body><p>
+    <lebel>Enter 1st Number:</lebel>
+    <input type="text" name="abc" id="val1"> <br> <br>
+    <lebel>Enter 2nd Number:</lebel>
+    <input type="text" name="def" id="val2">
+</p>
+<div>
+    <button onclick="getAdd();">Click to add</button>
+    <button onclick="getMul();">Click to Multiply</button>
+    <button onclick="getDiv();">Click to Division</button>
+    <button onclick="getSub();">Click to Substract</button></div>
+   <h3></h3>
+        <script>
+            function getAdd(){
+            var num1=(Number(document.querySelector("#val1").value));
+            var num2=(Number(document.querySelector("#val2").value));
+            var add=(num1+num2);
+            document.querySelector("h3").innerHTML="ADDITION: " +add;
+            document.querySelector("h3").style.color="red";
+            }
+            function getMul(){
+                var num1=(Number(document.querySelector("#val1").value));
+                var num2=(Number(document.querySelector("#val2").value));
+                var mul=(num1*num2);
+                document.querySelector("h3").innerHTML="MULTIPLICATION: " +mul;
+                document.querySelector("h3").style.color="Green";
+                }
+                function getDiv(){
+                    var num1=(Number(document.querySelector("#val1").value));
+                    var num2=(Number(document.querySelector("#val2").value));
+                    var div=(num1/num2);
+                    
+                    document.querySelector("h3").innerHTML="DIVISION: " +(div.toFixed(2));
+                    document.querySelector("h3").style.color="magenta";
+                    }
+                    function getSub(){
+                        var num1=(Number(document.querySelector("#val1").value));
+                        var num2=(Number(document.querySelector("#val2").value));
+                        var sub=(num1-num2);
+                        document.querySelector("h3").innerHTML="SUBSTRACTION: " +sub;
+                        document.querySelector("h3").style.color="darkred";
+                        }
+        </script>
+</body>
+</html>
